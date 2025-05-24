@@ -18,13 +18,13 @@ log_classifier/
 
 The model classifies logs into the following categories:
 
-- SystemEvent
-- SecurityIncident
-- Warning
-- ApplicationError
-- Debugging
-- SystemFailure
-- Informational
+- `SystemEvent`
+- `SecurityIncident`
+- `Warning`
+- `ApplicationError`
+- `Debugging`
+- `SystemFailure`
+- `Informational`
 
 ## 🚀 Quickstart
 

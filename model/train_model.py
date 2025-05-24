@@ -4,50 +4,51 @@ from sklearn.linear_model import LogisticRegression
 
 # Expanded log dataset
 logs = [
-    "System boot completed successfully",                   # SYSTEM_NOTIFICATION
-    "Unauthorized login attempt detected",                  # SECURITY_ALERT
-    "Disk space is almost full",                            # WARNING
-    "Unable to locate configuration file",                  # ERROR
-    "Debug mode enabled for user session",                  # DEBUG
-    "New software update is available",                     # SYSTEM_NOTIFICATION
-    "Firewall has blocked suspicious activity",             # SECURITY_ALERT
-    "Kernel panic occurred during boot",                    # SYSTEM_ERROR
-    "Scheduled backup completed",                           # SYSTEM_NOTIFICATION
-    "Memory leak detected in module",                       # SYSTEM_ERROR
-    "User admin logged out",                                # INFO
-    "Service crashed unexpectedly",                         # SYSTEM_ERROR
-    "SSL certificate expired",                              # SECURITY_ALERT
-    "Cache cleared successfully",                           # INFO
-    "Connection timeout while accessing database",          # ERROR
-    "Monitoring daemon restarted",                          # SYSTEM_NOTIFICATION
-    "System temperature exceeds threshold",                 # WARNING
-    "Invalid password entered multiple times",              # SECURITY_ALERT
-    "Reboot required after patch installation",             # SYSTEM_NOTIFICATION
-    "Developer tools enabled in production",                # WARNING
+    "System boot completed successfully",                   # SystemEvent
+    "Unauthorized login attempt detected",                  # SecurityIncident
+    "Disk space is almost full",                            # Warning
+    "Unable to locate configuration file",                  # ApplicationError
+    "Debug mode enabled for user session",                  # Debugging
+    "New software update is available",                     # SystemEvent
+    "Firewall has blocked suspicious activity",             # SecurityIncident
+    "Kernel panic occurred during boot",                    # SystemFailure
+    "Scheduled backup completed",                           # SystemEvent
+    "Memory leak detected in module",                       # SystemFailure
+    "User admin logged out",                                # Informational
+    "Service crashed unexpectedly",                         # SystemFailure
+    "SSL certificate expired",                              # SecurityIncident
+    "Cache cleared successfully",                           # Informational
+    "Connection timeout while accessing database",          # ApplicationError
+    "Monitoring daemon restarted",                          # SystemEvent
+    "System temperature exceeds threshold",                 # Warning
+    "Invalid password entered multiple times",              # SecurityIncident
+    "Reboot required after patch installation",             # SystemEvent
+    "Developer tools enabled in production",                # Warning
 ]
 
 labels = [
-    "SYSTEM_NOTIFICATION",
-    "SECURITY_ALERT",
-    "WARNING",
-    "ERROR",
-    "DEBUG",
-    "SYSTEM_NOTIFICATION",
-    "SECURITY_ALERT",
-    "SYSTEM_ERROR",
-    "SYSTEM_NOTIFICATION",
-    "SYSTEM_ERROR",
-    "INFO",
-    "SYSTEM_ERROR",
-    "SECURITY_ALERT",
-    "INFO",
-    "ERROR",
-    "SYSTEM_NOTIFICATION",
-    "WARNING",
-    "SECURITY_ALERT",
-    "SYSTEM_NOTIFICATION",
-    "WARNING",
+    "SystemEvent",
+    "SecurityIncident",
+    "Warning",
+    "ApplicationError",
+    "Debugging",
+    "SystemEvent",
+    "SecurityIncident",
+    "SystemFailure",
+    "SystemEvent",
+    "SystemFailure",
+    "Informational",
+    "SystemFailure",
+    "SecurityIncident",
+    "Informational",
+    "ApplicationError",
+    "SystemEvent",
+    "Warning",
+    "SecurityIncident",
+    "SystemEvent",
+    "Warning",
 ]
+
 
 # Train vectorizer and model
 vectorizer = TfidfVectorizer()
